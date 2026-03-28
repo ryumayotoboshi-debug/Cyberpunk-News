@@ -25,7 +25,14 @@ function renderList() {
     const div = document.createElement("div");
     div.className = "card";
 
+    // 👇 サムネ条件分岐
+    let thumbnailHTML = "";
+    if (article.thumbnail) {
+      thumbnailHTML = `<img src="${article.thumbnail}" class="thumb">`;
+    }
+
     div.innerHTML = `
+      ${thumbnailHTML}
       <h3>${article.title}</h3>
       <p>${article.date} | ${article.category}</p>
     `;
@@ -46,7 +53,14 @@ function openArticle(id) {
   document.getElementById("articleMeta").innerText =
     article.date + " | " + article.category;
 
-  document.getElementById("articleBody").innerHTML = article.body;
+  // 👇 サムネ条件分岐（詳細）
+  let thumbnailHTML = "";
+  if (article.thumbnail) {
+    thumbnailHTML = `<img src="${article.thumbnail}" class="thumb-large">`;
+  }
+
+  document.getElementById("articleBody").innerHTML =
+    thumbnailHTML + article.body;
 }
 
 function backToList() {
