@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    font-family: monospace;
+    background: #050510;
+    color: #0ff;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #0ff;
+}
+
+h1 {
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+}
+
+#tabs {
+    display: flex;
+    overflow-x: auto;
+}
+
+#tabs button {
+    flex: 1;
+    background: black;
+    color: #0ff;
+    border: 1px solid #0ff;
+    padding: 10px;
+}
+
+#tabs button:active {
+    background: #0ff;
+    color: black;
+}
+
+#newsList {
+    padding: 10px;
+}
+
+.newsCard {
+    border: 1px solid #0ff;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.newsCard:hover {
+    background: rgba(0,255,255,0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+#articleView {
+    padding: 15px;
+}
