@@ -1,57 +1,58 @@
 body {
-    margin: 0;
-    font-family: monospace;
-    background: #050510;
-    color: #0ff;
+  margin: 0;
+  font-family: monospace;
+  background: #050510;
+  color: #0ff;
 }
 
 header {
-    text-align: center;
-    padding: 10px;
-    border-bottom: 1px solid #0ff;
+  padding: 10px;
+  border-bottom: 1px solid #0ff;
+  text-align: center;
 }
 
 h1 {
-    color: #0ff;
-    text-shadow: 0 0 10px #0ff;
+  text-shadow: 0 0 10px #0ff;
 }
 
-#tabs {
-    display: flex;
-    overflow-x: auto;
+.tabs {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 10px;
 }
 
-#tabs button {
-    flex: 1;
-    background: black;
-    color: #0ff;
-    border: 1px solid #0ff;
-    padding: 10px;
+.tabs button {
+  background: transparent;
+  border: 1px solid #0ff;
+  color: #0ff;
+  margin: 2px;
+  padding: 6px;
+  flex: 1;
 }
 
-#tabs button:active {
-    background: #0ff;
-    color: black;
+.tabs button:hover {
+  background: #0ff;
+  color: #000;
 }
 
-#newsList {
-    padding: 10px;
+#listView {
+  padding: 10px;
 }
 
-.newsCard {
-    border: 1px solid #0ff;
-    margin-bottom: 10px;
-    padding: 10px;
+.card {
+  border: 1px solid #0ff;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
-.newsCard:hover {
-    background: rgba(0,255,255,0.1);
+.card:hover {
+  box-shadow: 0 0 10px #0ff;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 #articleView {
-    padding: 15px;
+  padding: 10px;
 }
