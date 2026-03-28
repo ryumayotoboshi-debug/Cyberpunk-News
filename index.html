@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEO NEWS</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+<header>
+    <h1>NEO NEWS</h1>
+
+    <div id="tabs">
+        <button onclick="filterCategory('all')">ALL</button>
+        <button onclick="filterCategory('速報')">速報</button>
+        <button onclick="filterCategory('時事')">時事</button>
+        <button onclick="filterCategory('エンタメ')">エンタメ</button>
+        <button onclick="filterCategory('スポーツ')">スポーツ</button>
+        <button onclick="filterCategory('ビジネス')">ビジネス</button>
+        <button onclick="filterCategory('IT')">IT</button>
+    </div>
+</header>
+
+<main id="newsList"></main>
+
+<!-- 記事表示 -->
+<div id="articleView" class="hidden">
+    <button id="backBtn" onclick="backToList()">← BACK</button>
+    <h2 id="articleTitle"></h2>
+    <p id="articleDate"></p>
+    <div id="articleContent"></div>
+</div>
+
+<script src="content01.js"></script>
+<script src="content02.js"></script>
+<script src="style.js"></script>
+
+</body>
+</html>
