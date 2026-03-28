@@ -1,58 +1,15 @@
-body {
-  margin: 0;
-  font-family: monospace;
-  background: #050510;
-  color: #0ff;
-}
-
-header {
-  padding: 10px;
-  border-bottom: 1px solid #0ff;
-  text-align: center;
-}
-
-h1 {
-  text-shadow: 0 0 10px #0ff;
-}
-
-.tabs {
-  display: flex;
-  overflow-x: auto;
-  margin-top: 10px;
-}
-
-.tabs button {
-  background: transparent;
+/* 一覧用 */
+.thumb {
+  width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+  margin-bottom: 5px;
   border: 1px solid #0ff;
-  color: #0ff;
-  margin: 2px;
-  padding: 6px;
-  flex: 1;
 }
 
-.tabs button:hover {
-  background: #0ff;
-  color: #000;
-}
-
-#listView {
-  padding: 10px;
-}
-
-.card {
-  border: 1px solid #0ff;
+/* 詳細用 */
+.thumb-large {
+  width: 100%;
   margin-bottom: 10px;
-  padding: 10px;
-}
-
-.card:hover {
-  box-shadow: 0 0 10px #0ff;
-}
-
-.hidden {
-  display: none;
-}
-
-#articleView {
-  padding: 10px;
+  border: 1px solid #0ff;
 }
