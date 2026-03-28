@@ -13,16 +13,15 @@ function renderList() {
   const list = document.getElementById("listView");
   list.innerHTML = "";
 
-  let filtered = articles;
+  let filtered = window.articles || [];
 
   if (currentCategory !== "all") {
-    filtered = articles.filter(a => a.category === currentCategory);
+    filtered = filtered.filter(a => a.category === currentCategory);
   }
 
-  // 日替わりランダム
   filtered = shuffle(filtered);
 
-  filtered.forEach((article, index) => {
+  filtered.forEach(article => {
     const div = document.createElement("div");
     div.className = "card";
 
@@ -31,14 +30,14 @@ function renderList() {
       <p>${article.date} | ${article.category}</p>
     `;
 
-    div.onclick = () => openArticle(index);
+    div.onclick = () => openArticle(article.id);
 
     list.appendChild(div);
   });
 }
 
-function openArticle(index) {
-  const article = articles[index];
+function openArticle(id) {
+  const article = window.articles.find(a => a.id === id);
 
   document.getElementById("listView").classList.add("hidden");
   document.getElementById("articleView").classList.remove("hidden");
@@ -55,5 +54,4 @@ function backToList() {
   document.getElementById("listView").classList.remove("hidden");
 }
 
-// 初期表示
 renderList();
